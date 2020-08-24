@@ -1,6 +1,6 @@
 # Laracon 2020 Examples
 
-This is just a standard Vue-CLI app with Vue 3 and vue-router installed.
+This is just a standard Vue-CLI app with Vue 3, vue-router, and Tailwind CSS installed.
 
 I've created a few different pages to demonstrate (and validate) some of the
 techniques I talk about in my Laracon 2020 talk.
