@@ -11,6 +11,11 @@ const routes = [
     path: '/data-table',
     name: 'DataTable',
     component: () => import(/* webpackChunkName: "data-table" */ '../views/DataTable.vue')
+  },
+  {
+    path: '/base-icon',
+    name: 'BaseIcon',
+    component: () => import(/* webpackChunkName: "base-icon" */ '../views/BaseIcon.vue')
   }
 ]
 

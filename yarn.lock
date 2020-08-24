@@ -5261,6 +5261,15 @@ loader-utils@^1.0.2, loader-utils@^1.1.0, loader-utils@^1.2.3, loader-utils@^1.4
     emojis-list "^3.0.0"
     json5 "^1.0.1"
 
+loader-utils@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-2.0.0.tgz#e4cace5b816d425a166b5f097e10cd12b36064b0"
+  integrity sha512-rP4F0h2RaWSvPEkD7BLDFQnvSf+nK+wr3ESUjNTyAGobqrijmW92zc+SO6d4p4B1wh7+B/Jg1mkQe5NYUEHtHQ==
+  dependencies:
+    big.js "^5.2.2"
+    emojis-list "^3.0.0"
+    json5 "^2.1.2"
+
 locate-path@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-3.0.0.tgz#dbec3b3ab759758071b58fe59fc41871af21400e"
@@ -8428,6 +8437,14 @@ vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   dependencies:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
+
+vue-svg-loader@^0.17.0-beta.1:
+  version "0.17.0-beta.1"
+  resolved "https://registry.yarnpkg.com/vue-svg-loader/-/vue-svg-loader-0.17.0-beta.1.tgz#0acd398833b5142cca7320b63dd463da9883116c"
+  integrity sha512-lUEgQ2ZrxCw4ZWJjgcXgsiSd1xSNJu+outZ3pJqGbJ9AiSQDD3SoRaqZE1/NcP1U4J9XYKLipwsb/Hoi9ArJ5g==
+  dependencies:
+    loader-utils "^2.0.0"
+    semver "^7.3.2"
 
 vue-template-es2015-compiler@^1.9.0:
   version "1.9.1"
