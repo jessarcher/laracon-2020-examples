@@ -1,7 +1,7 @@
 <template>
   <DataTable
     :columns="columns"
-    :rows="people"
+    :rows="sortedPeople"
     :sort="sort"
     class="max-w-3xl mx-auto"
     @sort="updateSort"
@@ -49,6 +49,7 @@ export default {
 
       people: [
         {
+          id: 1,
           name: 'Arthur Dent',
           occupation: 'BBC Radio Employee',
           email: 'arthur.dent@bbc.co.uk',
@@ -56,6 +57,7 @@ export default {
           status: 'active'
         },
         {
+          id: 2,
           name: 'Ford Prefect',
           occupation: 'Researcher',
           email: 'ford.prefect@megadodo.com',
@@ -63,6 +65,7 @@ export default {
           status: 'inactive'
         },
         {
+          id: 3,
           name: 'Trillian Astra',
           occupation: 'Astrophysicist',
           email: 'trillian.astra@subetha.net',
@@ -76,14 +79,33 @@ export default {
   computed: {
     sort () {
       return this.$route.query.sort || this.defaultSort
-    }
+    },
+
+    sortColumnName () {
+      return this.sort.replace(/^-/, '')
+    },
+
+    sortDirection () {
+      return /^-/.test(this.sort) ? 'desc' : 'asc'
+    },
+
+    sortedPeople () {
+      return [...this.people].sort((a, b) => {
+        a = a[this.sortColumnName].toLowerCase()
+        b = b[this.sortColumnName].toLowerCase()
+
+        if (a === b) {
+          return 0
+        }
+
+        return (a > b ? 1 : -1) * (this.sortDirection === 'asc' ? 1 : -1)
+      })
+    },
   },
 
   methods: {
     updateSort (sort) {
       this.$router.replace({ ...this.$route, query: { ...this.$route.query, sort } })
-
-      // Actually update the sorting...
     }
   }
 }
