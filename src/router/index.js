@@ -6,6 +6,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/data-table',
+    name: 'DataTable',
+    component: () => import(/* webpackChunkName: "data-table" */ '../views/DataTable.vue')
   }
 ]
 
