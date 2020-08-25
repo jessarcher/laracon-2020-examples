@@ -5,6 +5,8 @@ This is just a standard Vue-CLI app with Vue 3, vue-router, and Tailwind CSS ins
 I've created a few different pages to demonstrate (and validate) some of the
 techniques I talk about in my Laracon 2020 talk.
 
+Check out `src/components/` for the components, and `src/views` for the usage example.
+
 ## Project setup
 ```
 yarn install
