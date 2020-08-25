@@ -16,6 +16,11 @@ const routes = [
     path: '/base-icon',
     name: 'BaseIcon',
     component: () => import(/* webpackChunkName: "base-icon" */ '../views/BaseIcon.vue')
+  },
+  {
+    path: '/base-input',
+    name: 'BaseInput',
+    component: () => import(/* webpackChunkName: "base-input" */ '../views/BaseInput.vue')
   }
 ]
 
