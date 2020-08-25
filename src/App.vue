@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="flex px-2 border-b bg-white">
+      <router-link to="/" class="block py-4 px-2 border-b-2 border-transparent focus:bg-gray-400 hover:bg-gray-400" exact-active-class="border-purple-400">Home</router-link>
     </div>
-    <router-view/>
+    <div class="p-4">
+      <router-view/>
+    </div>
   </div>
 </template>
