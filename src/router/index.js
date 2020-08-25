@@ -21,6 +21,11 @@ const routes = [
     path: '/base-input',
     name: 'BaseInput',
     component: () => import(/* webpackChunkName: "base-input" */ '../views/BaseInput.vue')
+  },
+  {
+    path: '/horizontal-scroll',
+    name: 'HorizontalScroll',
+    component: () => import(/* webpackChunkName: "horizontal-scroll" */ '../views/HorizontalScroll.vue')
   }
 ]
 
