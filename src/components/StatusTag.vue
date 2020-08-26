@@ -1,20 +1,13 @@
 <template>
-  <div class="px-3 rounded-full font-semibold text-sm capitalize leading-loose" :class="[textColorClass, bgColorClass]">
+  <div class="px-3 rounded-full font-semibold text-sm capitalize leading-loose" :class="colorClasses">
     {{ status }}
   </div>
 </template>
 
 <script>
 const colors = {
-  active: {
-    text: 'text-green-900',
-    bg: 'bg-green-200'
-  },
-
-  inactive: {
-    text: 'text-red-900',
-    bg: 'bg-red-200'
-  }
+  active: 'text-green-900 bg-green-200',
+  inactive: 'text-red-900 bg-red-200',
 }
 
 export default {
@@ -22,18 +15,14 @@ export default {
     status: {
       type: String,
       required: true,
-      validator: (value) => ['active', 'inactive'].includes(value)
+      validator: (value) => Object.keys(colors).includes(value),
     }
   },
 
   computed: {
-    textColorClass () {
-      return colors[this.status].text
+    colorClasses () {
+      return colors[this.status]
     },
-
-    bgColorClass () {
-      return colors[this.status].bg
-    }
   }
 }
 </script>
