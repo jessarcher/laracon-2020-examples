@@ -19,10 +19,10 @@ export default {
 
   computed: {
     iconComponent () {
-      const name = this.name // Trigger a dependency for change detection
+      this.name // Trigger the name as a dependency for change detection
       return defineAsyncComponent(() => import(
         /* webpackChunkName: "icon-[request]" */
-        '@/assets/icons/' + name + '.svg'
+        '@/assets/icons/' + this.name + '.svg'
       ))
     }
   }
